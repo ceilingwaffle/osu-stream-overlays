@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/odometr.css" />
+  </head>
+
+  <body>
+    <div id="main">
+      <div id="target">
+        <img src="" id="bg" />
+        <div id="bgDark"></div>
+        <div id="title"></div>
+        <div class="text currentPP">
+          <div>PP:</div>
+          <div id="currentPP" class="odometer"></div>
+        </div>
+        <div class="text ifFC">
+          <div>FC:</div>
+          <div id="ifFC" class="odometer"></div>
+        </div>
+        <div id="mods"></div>
+        <div class="text combo">
+          <div id="comboCurrent"></div>
+          <div id="comboX">x</div>
+        </div>
+        <div class="mistakesWrapper">
+          <div id="hun"><hr /></div>
+          <div id="fiv"><hr /></div>
+          <div id="miss"><hr /></div>
+        </div>
+      </div>
+    </div>
+    <script src="deps/odometr.js"></script>
+    <script src="deps/reconnecting-websocket.min.js"></script>
+    <script defer>
+      {
+        let el = document.getElementById("100");
+        od = new Odometer({
+          el: el,
+          format: "d",
+        });
+      }
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>
